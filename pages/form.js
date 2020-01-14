@@ -22,18 +22,18 @@ const Form = () => {
 	return (
 		<Flex
 			direction='column'
-			p={2}
+			p={3}
 			boxShadow='lg'
 			bg={bgColor[colorMode]}
-			rounded={8}
+			rounded='lg'
 			justify='center'
 			align='center'
 			m={2}
-			h='550px'>
+			h='510px'>
 			<Flex justify='center' align='center' h='120px'>
-				<Image w='80px' src='/security.png' />
+				<Image w='80px' src='/security.png' alt='Logo' />
 			</Flex>
-			<Text>Sign up or login to your account.</Text>
+			<Text fontSize='xl'>Sign up or login to your account.</Text>
 			<Tabs isFitted variant='enclosed-colored' m={2}>
 				<TabList>
 					<Tab>Sign up</Tab>
@@ -48,14 +48,6 @@ const Form = () => {
 					</TabPanel>
 				</TabPanels>
 			</Tabs>
-
-			<Flex justify='center' align='center'>
-				<IconButton
-					onClick={toggleColorMode}
-					icon={colorMode === 'light' ? 'moon' : 'sun'}>
-					Change Color Mode
-				</IconButton>
-			</Flex>
 		</Flex>
 	);
 };

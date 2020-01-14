@@ -7,6 +7,7 @@ import {
 	FormHelperText,
 	Stack,
 	Button,
+	Text,
 } from '@chakra-ui/core';
 const SingupForm = () => {
 	return (
