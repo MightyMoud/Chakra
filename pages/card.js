@@ -18,10 +18,10 @@ const Card = () => {
 		<Box
 			w='400px'
 			bg={bgColor[colorMode]}
-			rounded='lg'
+			rounded='md'
 			boxShadow='lg'
 			overflow='hidden'>
-			<Image src='/thumb.png' alt='course cover' />
+			<Image src='./Thumb.png' alt='course cover' />
 			<Box p='5'>
 				<Box d='flex' alignItems='baseline'>
 					<Badge rounded='full' px='2' variant='solid' variantColor='teal'>

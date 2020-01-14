@@ -31,7 +31,7 @@ const Form = () => {
 			m={2}
 			h='510px'>
 			<Flex justify='center' align='center' h='120px'>
-				<Image w='80px' src='/security.png' alt='Logo' />
+				<Image w='80px' src='./security.png' alt='Logo' />
 			</Flex>
 			<Text fontSize='xl'>Sign up or login to your account.</Text>
 			<Tabs isFitted variant='enclosed-colored' m={2}>
