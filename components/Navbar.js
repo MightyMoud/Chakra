@@ -52,7 +52,7 @@ const Navbar = () => {
 				<PseudoBox
 					position='relative'
 					_hover={{ textDecor: 'underline', bottom: '5px' }}>
-					<Link href='/login'>
+					<Link href='/list'>
 						<a>List</a>
 					</Link>
 				</PseudoBox>
