@@ -1,19 +1,27 @@
-import { Box, Stack, PseudoBox } from '@chakra-ui/core';
+import { Flex, Stack, PseudoBox, useColorMode } from '@chakra-ui/core';
 import Link from 'next/link';
 
 const Navbar = () => {
+	const { colorMode, toggleColorMode } = useColorMode();
+	const bgColor = { light: 'gray.300', dark: 'gray.600' };
+	const textColor = { light: 'black', dark: 'gray.100' };
 	return (
-		<Box
+		<Flex
 			w='100vw'
-			bg='gray.300'
+			bg={bgColor[colorMode]}
 			textAlign='center'
+			align='center'
+			color={textColor[colorMode]}
+			justify='center'
 			fontSize={['md', 'lg', 'xl', '2xl']}
+			h='7vh'
 			p={2}>
 			<Stack
 				spacing={8}
 				align='center'
 				justify='center'
 				color='gray.700'
+				color={textColor[colorMode]}
 				isInline>
 				<PseudoBox
 					position='relative'
@@ -44,7 +52,7 @@ const Navbar = () => {
 					</Link>
 				</PseudoBox>
 			</Stack>
-		</Box>
+		</Flex>
 	);
 };
 
