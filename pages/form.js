@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import {
-	Box,
 	Text,
 	Flex,
 	Tabs,
@@ -10,7 +9,6 @@ import {
 	TabPanel,
 	Image,
 	useColorMode,
-	IconButton,
 } from '@chakra-ui/core';
 import { jsx } from '@emotion/core';
 import SingupForm from '../components/SignupForm';
@@ -23,18 +21,18 @@ const Form = () => {
 		<Flex
 			direction='column'
 			p={3}
-			boxShadow='lg'
+			boxShadow='sm'
+			w='350px'
 			bg={bgColor[colorMode]}
 			rounded='lg'
 			justify='center'
 			align='center'
-			m={2}
-			h='510px'>
+			m={2}>
 			<Flex justify='center' align='center' h='120px'>
 				<Image w='80px' src='./security.png' alt='Logo' />
 			</Flex>
-			<Text fontSize='xl'>Sign up or login to your account.</Text>
-			<Tabs isFitted variant='enclosed-colored' m={2}>
+			<Text fontSize='lg'>Sign up or login to your account.</Text>
+			<Tabs isFitted variant='enclosed-colored' m={2} w='100%'>
 				<TabList>
 					<Tab>Sign up</Tab>
 					<Tab>Login</Tab>

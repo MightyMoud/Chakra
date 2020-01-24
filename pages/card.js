@@ -18,10 +18,12 @@ const Card = () => {
 		<Box
 			w='400px'
 			bg={bgColor[colorMode]}
-			rounded='md'
-			boxShadow='lg'
+			rounded='20px'
+			border='1px solid'
+			boxShadow='sm'
+			borderColor='gray.300'
 			overflow='hidden'>
-			<Image src='./Thumb.png' alt='course cover' />
+			<Image src='./Thumb.png' alt='course cover' transform='scale(1.1)' />
 			<Box p='5'>
 				<Box d='flex' alignItems='baseline'>
 					<Badge rounded='full' px='2' variant='solid' variantColor='teal'>
@@ -43,7 +45,12 @@ const Card = () => {
 						2 Hours · 12 Lectures
 					</Text>
 				</Box>
-				<Text as='h2' my='2' fontWeight='bold' fontSize='xl' lineHeight='tight'>
+				<Text
+					as='h2'
+					my='2'
+					fontWeight='semibold'
+					fontSize='xl'
+					lineHeight='tight'>
 					Introduction to Chakra-UI
 				</Text>
 				<Text as='h4' isTruncated fontWeight='light' fontSize='md' mb='2'>
@@ -73,7 +80,12 @@ const Card = () => {
 					</Box>
 				</Flex>
 				<Box textAlign='center' mt='6'>
-					<Button variant='solid' variantColor='teal' size='lg' boxShadow='md'>
+					<Button
+						variant='solid'
+						variantColor='teal'
+						size='lg'
+						boxShadow='md'
+						_active={{ boxShadow: 'lg', bgColor: 'teal.500' }}>
 						Sign up now!
 					</Button>
 				</Box>
