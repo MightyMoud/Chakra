@@ -1,24 +1,26 @@
 {
-  "name": "chakra",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@chakra-ui/core": "^0.5.2",
-    "@emotion/core": "^10.0.27",
-    "@emotion/styled": "^10.0.27",
-    "emotion-theming": "^10.0.27",
-    "next": "^9.1.7",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-spectrum": "^1.1.5"
-  }
+	"name": "chakra",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@chakra-ui/core": "^0.5.2",
+		"@emotion/core": "^10.0.27",
+		"@emotion/styled": "^10.0.27",
+		"emotion-theming": "^10.0.27",
+		"next": "^9.1.7",
+		"react": "^16.12.0",
+		"react-dnd": "^10.0.2",
+		"react-dnd-html5-backend": "^10.0.2",
+		"react-dom": "^16.12.0",
+		"react-spectrum": "^1.1.5"
+	}
 }

@@ -44,7 +44,7 @@ const Navbar = () => {
 							<a>Home</a>
 						</Link>
 					</PseudoBox>
-					<PseudoBox
+					{/* <PseudoBox
 						position='relative'
 						opacity={router.pathname !== '/form' ? 0.4 : 1}>
 						<Link href='/form'>
@@ -63,6 +63,13 @@ const Navbar = () => {
 						opacity={router.pathname !== '/list' ? 0.4 : 1}>
 						<Link href='/list'>
 							<a>List</a>
+						</Link>
+					</PseudoBox>*/}
+					<PseudoBox
+						position='relative'
+						opacity={router.pathname !== '/tasks' ? 0.4 : 1}>
+						<Link href='/tasks'>
+							<a>Tasks</a>
 						</Link>
 					</PseudoBox>
 				</Stack>

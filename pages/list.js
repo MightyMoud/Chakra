@@ -4,65 +4,46 @@ import {
 	Badge,
 	Text,
 	Icon,
+	Grid,
+	Stack,
 	Flex,
 	Button,
 	useColorMode,
 	Divider,
+	PseudoBox,
+	Spinner,
 } from '@chakra-ui/core';
+import { createContext, useContext, useEffect, useState } from 'react';
+import DragCard from '../components/TaskCard';
+import BoxTarget from '../components/BoxTarget';
+
+export const CardContext = createContext({
+	WIP: null,
+	setWIP: null,
+});
 
 const List = () => {
-	const { colorMode, toggleColorMode } = useColorMode();
-	const bgColor = { light: 'gray.100', dark: 'gray.700' };
-	const textColor = { light: 'gray.500', dark: 'gray.100' };
+	const [WIP, setWIP] = useState(true);
+
 	return (
-		<Flex
-			maxW='1000px'
-			w={['90vw', '90vw', '90vw', '70vw']}
-			direction={['column', 'column', 'row', 'row']}
-			justify='center'
-			bg={bgColor[colorMode]}
-			boxShadow='md'
-			rounded='lg'
-			p='4'>
-			<Flex align='center' wrap='nowrap'>
-				<Image src='/icon.png' />
-				<Box mx='4'>
-					<Text as='h2' fontSize='xl' fontWeight='bold' mb='2'>
-						Usability
-					</Text>
-					<Text as='h3' fontWeight='light' fontSize='lg'>
-						Sometimes the simples things are the hardest to find. So we created
-						a new line for everday life.
-					</Text>
+		<CardContext.Provider value={{ WIP, setWIP }}>
+			<Grid
+				gap={6}
+				templateColumns='1fr 3fr'
+				bg='gray.500'
+				w='80vw'
+				h='93vh'
+				p={3}>
+				<Box bg='gray.200' rounded='md' p={3} boxShadow='md'>
+					<Stack spacing={3}>{WIP && <DragCard />}</Stack>
 				</Box>
-			</Flex>
-			<Divider orientation='vertical' m='4' />
-			<Flex align='center' wrap='nowrap'>
-				<Image src='/icon2.png' />
-				<Box m='4'>
-					<Text as='h2' fontSize='xl' fontWeight='bold' mb='2'>
-						Parralax Effect
-					</Text>
-					<Text as='h3' fontWeight='light' fontSize='lg'>
-						Sometimes the simples things are the hardest to find. So we created
-						a new line for everday life.
-					</Text>
+				<Box bg='blue.200' rounded='md' p={3} boxShadow='md'>
+					<Stack>
+						<BoxTarget>{!WIP && <DragCard />}</BoxTarget>
+					</Stack>
 				</Box>
-			</Flex>
-			<Divider orientation='vertical' m='4' />
-			<Flex align='center' wrap='nowrap'>
-				<Image src='/icon3.png' />
-				<Box mx='4'>
-					<Text as='h2' fontSize='xl' fontWeight='bold' mb='2'>
-						Unlimited Colors
-					</Text>
-					<Text as='h3' fontWeight='light' fontSize='lg'>
-						Sometimes the simples things are the hardest to find. So we created
-						a new line for everday life.
-					</Text>
-				</Box>
-			</Flex>
-		</Flex>
+			</Grid>
+		</CardContext.Provider>
 	);
 };
 

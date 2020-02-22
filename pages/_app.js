@@ -4,19 +4,24 @@ import {
 	CSSReset,
 	ColorModeProvider,
 } from '@chakra-ui/core';
+import Backend from 'react-dnd-html5-backend';
+import { DndProvider } from 'react-dnd';
+
 import Navbar from '../components/Navbar';
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<ThemeProvider>
 			<ColorModeProvider>
-				<Flex direction='column' align='center' justify='center'>
-					<CSSReset />
-					<Navbar />
-					<Flex justify='center' align='center' w='100%' h='93vh'>
-						<Component {...pageProps} />
+				<DndProvider backend={Backend}>
+					<Flex direction='column' align='center' justify='center'>
+						<CSSReset />
+						<Navbar />
+						<Flex justify='center' align='center' w='100%' h='93vh'>
+							<Component {...pageProps} />
+						</Flex>
 					</Flex>
-				</Flex>
+				</DndProvider>
 			</ColorModeProvider>
 		</ThemeProvider>
 	);
