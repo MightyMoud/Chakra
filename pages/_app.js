@@ -4,10 +4,10 @@ import {
 	CSSReset,
 	ColorModeProvider,
 } from '@chakra-ui/core';
-import Backend from 'react-dnd-html5-backend';
-import { DndProvider } from 'react-dnd';
 
 import Navbar from '../components/Navbar';
+import { DndProvider } from 'react-dnd';
+import Backend from 'react-dnd-html5-backend';
 
 function MyApp({ Component, pageProps }) {
 	return (

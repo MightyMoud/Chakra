@@ -1,5 +1,5 @@
 import { Box, Badge, Text, Flex } from '@chakra-ui/core';
-import { ItemTypes } from '../utils/constants';
+import { ItemTypes } from '../utils/items';
 import { useDrag } from 'react-dnd';
 
 const TaskCard = props => {
@@ -19,7 +19,7 @@ const TaskCard = props => {
 			my='4'
 			p={3}
 			bg='gray.500'
-			opacity={isDragging ? 0.5 : 1}
+			opacity={isDragging ? '0.5' : '1'}
 			boxShadow='sm'
 			w='100%'
 			rounded='md'

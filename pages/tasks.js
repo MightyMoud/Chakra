@@ -1,5 +1,5 @@
 import { Box, Grid, Stack, Text } from '@chakra-ui/core';
-import { createContext, useContext, useEffect, useState } from 'react';
+import { useState, createContext } from 'react';
 import TaskCard from '../components/TaskCard';
 import BoxTarget from '../components/BoxTarget';
 
@@ -28,7 +28,7 @@ const Tasks = () => {
 			status: 'wip',
 			category: 'Chores',
 			title: 'Renew Gym Membership',
-			details: 'Gotta please the muscles! 💪🏻',
+			details: 'Gotta keep the muscles happy! 💪🏻',
 		},
 	]);
 
@@ -44,7 +44,7 @@ const Tasks = () => {
 				gap={6}
 				templateColumns='1fr 3fr'
 				bg='gray.500'
-				w='80vw'
+				w='100vw'
 				h='93vh'
 				p={3}>
 				<Box bg='gray.200' rounded='md' p={3} boxShadow='md'>

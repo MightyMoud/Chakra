@@ -1,9 +1,8 @@
-import { Box, Stack } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/core';
 import { useDrop } from 'react-dnd';
-import { ItemTypes } from '../utils/constants';
-
-import { CardContext } from '../pages/tasks';
+import { ItemTypes } from '../utils/items';
 import { useContext } from 'react';
+import { CardContext } from '../pages/tasks';
 
 const BoxTarget = props => {
 	const { markAsDone } = useContext(CardContext);
@@ -21,8 +20,9 @@ const BoxTarget = props => {
 			ref={drop}
 			m={2}
 			p={3}
-			bg={isOver ? 'green.500' : 'green.200'}
 			boxShadow='sm'
+			bg={isOver ? 'green.500' : 'green.200'}
+			minH='200px'
 			textAlign='center'
 			w='100%'
 			rounded='md'
